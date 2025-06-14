@@ -1,19 +1,17 @@
-// index.js
 
-// "Database"
-const phoneDB = 9391596462;            // number
-const passDB  = "Sravanthi";          // string
+const phoneDB = 9391596462;            
+const passDB  = "Sravanthi";          
 
 function login() {
   const enteredPhone = document.getElementById("num").value.trim();
   const enteredPass  = document.getElementById("pass").value.trim();
   const resultEl     = document.getElementById("res");
 
-  // Reset result display
+  
   resultEl.textContent = "";
   resultEl.className   = "mt-3 text-center";
 
-  checkPhone(Number(enteredPhone))  // convert to number
+  checkPhone(Number(enteredPhone))  
     .then(() => checkPass(enteredPass))
     .then(() => {
       resultEl.textContent = "Login successful!";
